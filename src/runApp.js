@@ -1,5 +1,7 @@
 
+import './runApp.css';
+
 export function runMyApp (el) {
-el.innerHTML = '<h1>Hello world!</h1>';
+el.innerHTML = '<h1 class="paragraf" >Hello world!</h1>';
 
 }
