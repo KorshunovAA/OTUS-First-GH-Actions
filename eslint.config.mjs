@@ -9,11 +9,7 @@ export default defineConfig([
     languageOptions: { globals: globals.browser }
   },
 
-{
-    "parserOptions": {
-        "sourceType": "module",
-    }
-}
+
 
 
 ]);
