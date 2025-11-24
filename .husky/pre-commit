@@ -2,4 +2,3 @@
 
 
 npx lint-staged
-npm test
