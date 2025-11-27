@@ -4,12 +4,13 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": "jest --env=jsdom",
+    "test": "jest",
     "build": "webpack --mode=production",
     "dev": "webpack serve --mode=development",
-    "prepare": "husky && husky install",
-    "lint:check": "eslint",
-    "lint:fix": "eslint --fix"
+    "prepare": "husky install",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+
   },
   "repository": {
     "type": "git",
@@ -40,7 +41,13 @@
   "dependencies": {
     "tslib": "^2.8.1"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "*.{js, css, yml, html}": "eslint --cache --fix"
   }
+
 }
