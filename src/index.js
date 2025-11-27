@@ -1,7 +1,10 @@
 
-import { runMyApp } from "./runApp";
+//import { runMyApp } from "./runApp";
+import { pApp } from "./DZ7_FirstWorkWithElements.js";
 
-runMyApp(document.body);
+//runMyApp(document.body);
+
+pApp(document.body);
 
 
 
