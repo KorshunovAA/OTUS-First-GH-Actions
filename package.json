@@ -4,13 +4,12 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": "jest",
+    "test": "jest --env=jsdom",
     "build": "webpack --mode=production",
     "dev": "webpack serve --mode=development",
     "prepare": "husky install",
     "lint:check": "eslint .",
     "lint:fix": "eslint . --fix"
-
   },
   "repository": {
     "type": "git",
@@ -32,6 +31,7 @@
     "html-webpack-plugin": "^5.6.5",
     "husky": "^9.1.7",
     "jest": "^30.2.0",
+    "jest-environment-jsdom": "^30.2.0",
     "lint-staged": "^16.2.7",
     "style-loader": "^4.0.0",
     "webpack": "^5.103.0",
@@ -49,5 +49,4 @@
   "lint-staged": {
     "*.{js, css, yml, html}": "eslint --cache --fix"
   }
-
 }
