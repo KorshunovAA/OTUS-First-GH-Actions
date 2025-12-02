@@ -24,7 +24,11 @@ describe("pApp", () => {
     expect(input).not.toBe(null);
     expect(button).not.toBe(null);
     expect(isButtonVisible()).toBe(false);
-    expect(getParagraphs()).toEqual(["Текст первого параграфа", "Текст второго параграфа", "Текст третьего параграфа"]);
+    expect(getParagraphs()).toEqual([
+      "Текст первого параграфа",
+      "Текст второго параграфа",
+      "Текст третьего параграфа",
+    ]);
   });
 
   it("button appears on entering text", () => {
@@ -42,7 +46,12 @@ describe("pApp", () => {
     const text = `${Math.random()}`;
     enterText(text);
     clickButton();
-    expect(getParagraphs()).toEqual(["Текст первого параграфа", "Текст второго параграфа", "Текст третьего параграфа", text]);
+    expect(getParagraphs()).toEqual([
+      "Текст первого параграфа",
+      "Текст второго параграфа",
+      "Текст третьего параграфа",
+      text,
+    ]);
   });
 
   it("adds paragraph with text from input", () => {
@@ -55,9 +64,14 @@ describe("pApp", () => {
     const text3 = `${Math.random()}`;
     enterText(text3);
     clickButton();
-    expect(getParagraphs()).toEqual(["Текст второго параграфа", "Текст третьего параграфа", text1, text2, text3]);
-  }); 
-
+    expect(getParagraphs()).toEqual([
+      "Текст второго параграфа",
+      "Текст третьего параграфа",
+      text1,
+      text2,
+      text3,
+    ]);
+  });
 
   it("Checking that the input field is cleared after pressing the button", () => {
     const text4 = `${Math.random()}`;
@@ -65,18 +79,21 @@ describe("pApp", () => {
     clickButton();
     expect(input.value.length).toEqual(0);
     expect(isButtonVisible()).toBe(false);
-  }); 
+  });
 
-
-it("a new paragraph is added if a space is entered", () => {
+  it("a new paragraph is added if a space is entered", () => {
     const text = " ";
     enterText(text);
     clickButton();
-    expect(getParagraphs()).toEqual(["Текст первого параграфа", "Текст второго параграфа", "Текст третьего параграфа", " "]);
-  }); 
+    expect(getParagraphs()).toEqual([
+      "Текст первого параграфа",
+      "Текст второго параграфа",
+      "Текст третьего параграфа",
+      " ",
+    ]);
+  });
 
-
-it("button will not be broken", () => {
+  it("button will not be broken", () => {
     const text1 = `${Math.random()}`;
     enterText(text1);
     clickButton();
@@ -89,10 +106,16 @@ it("button will not be broken", () => {
     const text4 = `${Math.random()}`;
     enterText(text4);
     clickButton();
-    expect(getParagraphs()).toEqual(["Текст третьего параграфа", text1, text2, text3, text4]);
+    expect(getParagraphs()).toEqual([
+      "Текст третьего параграфа",
+      text1,
+      text2,
+      text3,
+      text4,
+    ]);
     expect(isButtonVisible()).toBe(false);
     expect(input.value.length).toEqual(0);
-  }); 
+  });
 
   it("button will never be broken", () => {
     const text1 = `${Math.random()}`;
@@ -113,8 +136,5 @@ it("button will not be broken", () => {
     expect(getParagraphs()).toEqual([text1, text2, text3, text4, text5]);
     expect(isButtonVisible()).toBe(false);
     expect(input.value.length).toEqual(0);
-  }); 
-
-
+  });
 });
-

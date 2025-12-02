@@ -9,7 +9,6 @@ export function pApp(el) {
     <p class="paragraf">Текст третьего параграфа</p>
 `;
 
-
   const input = el.querySelector("input");
   const button = el.querySelector("button");
 
@@ -20,9 +19,9 @@ export function pApp(el) {
   button.addEventListener("click", () => {
     const newP = document.createElement("p");
     newP.innerHTML = input.value;
-    newP.classList.add('paragraf'); // Присвоили новому элементу свойства класса "paragraf"
+    newP.classList.add("paragraf"); // Присвоили новому элементу свойства класса "paragraf"
     el.appendChild(newP);
-    input.value = '';
+    input.value = "";
     button.hidden = true;
 
     const pList = el.querySelectorAll("p");
