@@ -8,7 +8,7 @@
     "build": "webpack --mode=production",
     "dev": "webpack serve --mode=development",
     "prepare": "husky install",
-    "lint": "eslint .",
+    "lint:check": "eslint .",
     "lint:fix": "eslint . --fix"
 
   },
