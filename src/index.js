@@ -1,8 +1,8 @@
+//import { runMyApp } from "./runApp";
+import { pApp } from "./DZ7_FirstWorkWithElements.js";
 
-import { runMyApp } from "./runApp";
+//runMyApp(document.body);
 
-runMyApp(document.body);
-
-
+pApp(document.body);
 
 //runMyApp(document.querySelector("#app"));
