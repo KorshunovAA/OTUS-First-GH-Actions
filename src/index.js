@@ -1,5 +1,5 @@
 //import { runMyApp } from "./runApp";
-import { pApp } from "./DZ7_FirstWorkWithElements.js";
+import { pApp } from "./GetWeather.js";
 
 //runMyApp(document.body);
 

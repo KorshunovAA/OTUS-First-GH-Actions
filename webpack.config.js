@@ -13,7 +13,7 @@ module.exports = {
       directory: path.join(__dirname, "public"),
     },
     compress: true,
-    port: 9002,
+    port: 9001,
   },
   module: {
     rules: [
